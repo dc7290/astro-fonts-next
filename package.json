@@ -1,5 +1,5 @@
 {
-  "name": "astro-fonts",
+  "name": "astro-fonts-next",
   "version": "0.0.0-development",
   "description": "Astro integration that works the same way as Next.js font optimization.",
   "keywords": [
@@ -8,13 +8,13 @@
     "fonts",
     "optimization"
   ],
-  "homepage": "https://github.com/dc7290/astro-fonts#readme",
+  "homepage": "https://github.com/dc7290/astro-fonts-next#readme",
   "bugs": {
-    "url": "https://github.com/dc7290/astro-fonts/issues"
+    "url": "https://github.com/dc7290/astro-fonts-next/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/dc7290/astro-fonts"
+    "url": "https://github.com/dc7290/astro-fonts-next"
   },
   "license": "MIT",
   "author": "dc7290 <dhkh.cba0927@gmail.com>",
