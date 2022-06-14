@@ -1,0 +1,13 @@
+{
+  "extends": ["config:base", ":timezone(Asia/Tokyo)"],
+  "schedule": ["after 2am and before 10am every weekend"],
+  "npm": {
+    "rangeStrategy": "bump"
+  },
+  "packageRules": [
+    {
+      "matchUpdateTypes": ["minor", "patch"],
+      "automerge": true
+    }
+  ]
+}

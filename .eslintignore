@@ -1,0 +1,15 @@
+# config
+.eslintrc.js
+**/*config.js
+
+# git
+.gitkeep
+
+#bin
+/bin
+
+# examples
+/examples
+
+# testing
+__tests__/e2e/cli.js

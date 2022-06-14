@@ -1,0 +1,28 @@
+name: Release
+
+on:
+  push:
+    branches: [release]
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Use Node.js 16
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+          cache: 'yarn'
+      - run: yarn install
+      - run: yarn test
+      - run: yarn build
+      - name: Release
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+          GIT_AUTHOR_NAME: 'dc7290'
+          GIT_AUTHOR_EMAIL: 'dhkh.cba0927@gmail.com'
+          GIT_COMMITTER_NAME: 'dc7290'
+          GIT_COMMITTER_EMAIL: 'dhkh.cba0927@gmail.com'
+        run: yarn semantic-release

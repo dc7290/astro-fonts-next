@@ -1,0 +1,78 @@
+{
+  "name": "astro-fonts",
+  "version": "0.0.0-development",
+  "description": "Astro integration that works the same way as Next.js font optimization.",
+  "keywords": [
+    "astro-component",
+    "perf",
+    "fonts",
+    "optimization"
+  ],
+  "homepage": "https://github.com/dc7290/astro-fonts#readme",
+  "bugs": {
+    "url": "https://github.com/dc7290/astro-fonts/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dc7290/astro-fonts"
+  },
+  "license": "MIT",
+  "author": "dc7290 <dhkh.cba0927@gmail.com>",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "prebuild": "rimraf dist",
+    "build": "tsc --project ./tsconfig.build.json",
+    "commitmsg": "commitlint -e $GIT_PARAMS",
+    "coverage": "vitest run --coverage",
+    "lint-staged": "lint-staged",
+    "prepare": "husky install",
+    "semantic-release": "semantic-release",
+    "test": "vitest",
+    "test:ui": "vitest --ui"
+  },
+  "lint-staged": {
+    "*.ts": [
+      "eslint --fix",
+      "prettier --write"
+    ]
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@commitlint/cli": "17.0.2",
+    "@commitlint/config-conventional": "17.0.2",
+    "@semantic-release/changelog": "6.0.1",
+    "@semantic-release/git": "10.0.1",
+    "@tsconfig/strictest": "1.0.1",
+    "@types/node": "16.11.39",
+    "@typescript-eslint/eslint-plugin": "5.27.1",
+    "@typescript-eslint/parser": "5.27.1",
+    "@vitest/ui": "0.14.2",
+    "c8": "7.11.3",
+    "conventional-changelog-conventionalcommits": "5.0.0",
+    "eslint": "8.17.0",
+    "eslint-config-prettier": "8.5.0",
+    "eslint-plugin-simple-import-sort": "7.0.0",
+    "git-cz": "4.9.0",
+    "husky": "8.0.1",
+    "lint-staged": "12.5.0",
+    "prettier": "2.6.2",
+    "rimraf": "3.0.2",
+    "semantic-release": "19.0.3",
+    "typescript": "4.7.3",
+    "vitest": "0.14.2"
+  },
+  "peerDependencies": {
+    "astro": ">=1.0.0-beta.0"
+  },
+  "engines": {
+    "node": "^14.0.0 || ^16.0.0 || ^18.0.0"
+  },
+  "volta": {
+    "node": "16.15.1",
+    "yarn": "1.22.19"
+  }
+}

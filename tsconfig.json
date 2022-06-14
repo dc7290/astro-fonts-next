@@ -1,0 +1,10 @@
+{
+  "extends": "@tsconfig/strictest/tsconfig.json",
+  "compilerOptions": {
+    "noEmit": true,
+    "target": "ES2015",
+    "module": "ESNext",
+    "moduleResolution": "node"
+  },
+  "include": ["./src/**/*.ts"]
+}
