@@ -5,7 +5,7 @@
  * @see {@link https://github.com/streamich/git-cz/blob/master/lib/defaults.js} for default configs.
  */
 
-const types = require('./commit-types.config')
+const types = require('./commit-types.config.cjs')
 
 module.exports = {
   /**

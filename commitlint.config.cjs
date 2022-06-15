@@ -3,10 +3,10 @@
  * @see {@link https://commitlint.js.org/#/} for details.
  */
 
-const typeEnum = require('./commit-types.config').map(({ type }) => type)
-const scopeEnum = require('./changelog.config').scopes
-const subjectMinLength = require('./changelog.config').minMessageLength ?? 3
-const subjectMaxLength = require('./changelog.config').maxMessageLength ?? 64
+const typeEnum = require('./commit-types.config.cjs').map(({ type }) => type)
+const scopeEnum = require('./changelog.config.cjs').scopes
+const subjectMinLength = require('./changelog.config.cjs').minMessageLength ?? 3
+const subjectMaxLength = require('./changelog.config.cjs').maxMessageLength ?? 64
 
 module.exports = {
   extends: ['@commitlint/config-conventional'],
