@@ -1,7 +1,7 @@
 import type { HtmlTagDescriptor, Plugin } from 'vite'
 
-import { OPTIMIZED_FONT_PROVIDERS } from './utils/constants'
-import { getFontDefinitionFromNetwork } from './utils/font-utils'
+import { OPTIMIZED_FONT_PROVIDERS } from './utils/constants.js'
+import { getFontDefinitionFromNetwork } from './utils/font-utils.js'
 
 interface PluginOptins {
   urls: string[]

@@ -1,7 +1,7 @@
 import type { AstroIntegration } from 'astro'
 
-import plugin from './plugin'
-import { OPTIMIZED_FONT_PROVIDERS } from './utils/constants'
+import plugin from './plugin.js'
+import { OPTIMIZED_FONT_PROVIDERS } from './utils/constants.js'
 
 const LIB_NAME = 'astro-fonts-next'
 

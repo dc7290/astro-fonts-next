@@ -2,7 +2,7 @@
 
 import https from 'https'
 
-import { GOOGLE_FONT_PROVIDER } from './constants'
+import { GOOGLE_FONT_PROVIDER } from './constants.js'
 
 const CHROME_UA =
   'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.61 Safari/537.36'
