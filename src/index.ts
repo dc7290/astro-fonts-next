@@ -13,7 +13,7 @@ export default (options: AstroFontsNextOptions): AstroIntegration => {
   return {
     name: LIB_NAME,
     hooks: {
-      'astro:config:setup': async ({ command, updateConfig }) => {
+      'astro:config:setup': ({ command, updateConfig }) => {
         if (!options.url || options.url === '' || options.url.length === 0) {
           throw new Error(`[${LIB_NAME}]: you must set a \`url\` in your config!`)
         }
@@ -43,7 +43,9 @@ export default (options: AstroFontsNextOptions): AstroIntegration => {
         })
 
         updateConfig({
-          vite: { plugins: [plugin({ urls, command })] },
+          vite: {
+            plugins: [plugin({ urls, command })],
+          },
         })
       },
     },
