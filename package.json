@@ -37,7 +37,7 @@
     "test:build:simple": "astro build --root ./__tests__/fixtures/simple",
     "test:build:multiple": "astro build --root ./__tests__/fixtures/multiple",
     "test:build": "run-p test:build:*",
-    "pretest": "run-s bulld test:build"
+    "pretest": "run-s build test:build"
   },
   "lint-staged": {
     "*.ts": [
