@@ -19,6 +19,7 @@
   "license": "MIT",
   "author": "dc7290 <dhkh.cba0927@gmail.com>",
   "main": "dist/index.js",
+  "module": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
     "dist"
@@ -51,6 +52,7 @@
     "@typescript-eslint/eslint-plugin": "5.27.1",
     "@typescript-eslint/parser": "5.27.1",
     "@vitest/ui": "0.14.2",
+    "astro": "1.0.0-beta.46",
     "c8": "7.11.3",
     "conventional-changelog-conventionalcommits": "5.0.0",
     "eslint": "8.17.0",
@@ -63,10 +65,11 @@
     "rimraf": "3.0.2",
     "semantic-release": "19.0.3",
     "typescript": "4.7.3",
+    "vite": "2.9.12",
     "vitest": "0.14.2"
   },
   "peerDependencies": {
-    "astro": ">=1.0.0-beta.0"
+    "astro": "^1.0.0-beta.0"
   },
   "engines": {
     "node": "^14.0.0 || ^16.0.0 || ^18.0.0"
