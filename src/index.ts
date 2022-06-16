@@ -9,6 +9,7 @@ import { getFontDefinitionFromNetwork } from './utils/font-utils.js'
 const LIB_NAME = 'astro-fonts-next'
 
 const urls: string[] = []
+let buildFormat: 'file' | 'directory'
 
 export interface AstroFontsNextOptions {
   url: string | string[]
@@ -18,7 +19,7 @@ export default (options: AstroFontsNextOptions): AstroIntegration => {
   return {
     name: LIB_NAME,
     hooks: {
-      'astro:config:done': () => {
+      'astro:config:done': ({ config }) => {
         if (!options.url || options.url === '' || options.url.length === 0) {
           throw new Error(`[${LIB_NAME}]: you must set a \`url\` in your config!`)
         }
@@ -44,6 +45,8 @@ export default (options: AstroFontsNextOptions): AstroIntegration => {
             throw new Error(`[${LIB_NAME}]: \`${url}\` is not supported`)
           }
         })
+
+        buildFormat = config.build.format
       },
 
       'astro:server:setup': ({ server }) => {
@@ -61,7 +64,17 @@ export default (options: AstroFontsNextOptions): AstroIntegration => {
         }))
 
         const promises = pages.map(async ({ pathname }) => {
-          const filePath = join(dir.pathname, pathname, 'index.html')
+          let extensionWithPathname = ''
+
+          if (pathname === '') {
+            extensionWithPathname = 'index.html'
+          } else if (buildFormat === 'directory') {
+            extensionWithPathname = join(pathname, 'index.html')
+          } else {
+            extensionWithPathname = pathname.replace(/\/$/, '') + '.html'
+          }
+
+          const filePath = join(dir.pathname, extensionWithPathname)
           const file = await readFile(filePath, 'utf-8')
 
           const $ = load(file)
