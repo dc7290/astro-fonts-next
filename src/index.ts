@@ -1,5 +1,6 @@
 import type { AstroIntegration } from 'astro'
 import { load } from 'cheerio'
+import { readdirSync } from 'fs'
 import { readFile, writeFile } from 'fs/promises'
 import { join } from 'path'
 
@@ -49,10 +50,10 @@ export default (options: AstroFontsNextOptions): AstroIntegration => {
         buildFormat = config.build.format
       },
 
-      'astro:server:setup': ({ server }) => {
-        // eslint-disable-next-line no-console
-        console.log(server)
-      },
+      // 'astro:server:setup': ({ server }) => {
+      //   // eslint-disable-next-line no-console
+      //   console.log(server)
+      // },
 
       'astro:build:done': async ({ pages, dir }) => {
         const fontDefinitionPromises = urls.map((url) => getFontDefinitionFromNetwork(url))
@@ -62,6 +63,9 @@ export default (options: AstroFontsNextOptions): AstroIntegration => {
           url: urls[i],
           preconnect: OPTIMIZED_FONT_PROVIDERS.find((provider) => urls[i]?.startsWith(provider.url))?.preconnect,
         }))
+
+        // eslint-disable-next-line no-console
+        console.log(readdirSync(dir.pathname))
 
         const promises = pages.map(async ({ pathname }) => {
           let extensionWithPathname = ''
