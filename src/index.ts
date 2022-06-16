@@ -1,7 +1,7 @@
 import type { AstroIntegration } from 'astro'
 import { load } from 'cheerio'
 import { readFile, writeFile } from 'fs/promises'
-import { join } from 'path'
+import { join, resolve } from 'path'
 
 import { OPTIMIZED_FONT_PROVIDERS } from './utils/constants.js'
 import { getFontDefinitionFromNetwork } from './utils/font-utils.js'
@@ -74,10 +74,7 @@ export default (options: AstroFontsNextOptions): AstroIntegration => {
             extensionWithPathname = pathname.replace(/\/$/, '') + '.html'
           }
 
-          // eslint-disable-next-line no-console
-          console.log(extensionWithPathname, join(dir.pathname, extensionWithPathname))
-
-          const filePath = join(dir.pathname, extensionWithPathname)
+          const filePath = resolve(dir.pathname, extensionWithPathname)
           const file = await readFile(filePath, 'utf-8')
 
           const $ = load(file)
