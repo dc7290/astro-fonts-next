@@ -888,6 +888,14 @@
   dependencies:
     tsm "^2.1.4"
 
+"@rollup/pluginutils@^4.2.1":
+  version "4.2.1"
+  resolved "https://registry.yarnpkg.com/@rollup/pluginutils/-/pluginutils-4.2.1.tgz#e6c6c3aba0744edce3fb2074922d3776c0af2a6d"
+  integrity sha512-iKnFXr7NkdZAIHiIWE+BX5ULi/ucVFYWD6TbAV+rZctiRTY2PL6tsIKhoIOaoskiWAkgu+VsbXgUVDNLHf+InQ==
+  dependencies:
+    estree-walker "^2.0.1"
+    picomatch "^2.2.2"
+
 "@semantic-release/changelog@6.0.1":
   version "6.0.1"
   resolved "https://registry.yarnpkg.com/@semantic-release/changelog/-/changelog-6.0.1.tgz#8dd0334fd8c7d50cda747d2591e4f18f816b3c9c"
@@ -2816,6 +2824,11 @@ estree-util-visit@^1.0.0:
     "@types/estree-jsx" "^0.0.1"
     "@types/unist" "^2.0.0"
 
+estree-walker@^2.0.1:
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/estree-walker/-/estree-walker-2.0.2.tgz#52f010178c2a4c117a7757cfe942adb7d2da4cac"
+  integrity sha512-Rfkk/Mp/DL7JVje3u18FxFujQlTNR2q6QfMSMB7AvCBx91NGj/ba3kCfza0f6dVDbw7YlRf/nDrn7pQrCCyQ/w==
+
 estree-walker@^3.0.1:
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/estree-walker/-/estree-walker-3.0.1.tgz#c2a9fb4a30232f5039b7c030b37ead691932debd"
@@ -4108,6 +4121,11 @@ kleur@^4.0.3, kleur@^4.1.4:
   version "4.1.4"
   resolved "https://registry.yarnpkg.com/kleur/-/kleur-4.1.4.tgz#8c202987d7e577766d039a8cd461934c01cda04d"
   integrity sha512-8QADVssbrFjivHWQU7KkMgptGTl6WAcSdlbBPY4uNF+mWr6DGcKrvY2w4FQJoXch7+fKMjj0dRrL75vk3k23OA==
+
+kolorist@^1.5.1:
+  version "1.5.1"
+  resolved "https://registry.yarnpkg.com/kolorist/-/kolorist-1.5.1.tgz#c3d66dc4fabde4f6b7faa6efda84c00491f9e52b"
+  integrity sha512-lxpCM3HTvquGxKGzHeknB/sUjuVoUElLlfYnXZT73K8geR9jQbroGlSCFBax9/0mpGoD3kzcMLnOlGQPJJNyqQ==
 
 levn@^0.4.1:
   version "0.4.1"
@@ -5926,15 +5944,15 @@ picocolors@^1.0.0:
   resolved "https://registry.yarnpkg.com/picocolors/-/picocolors-1.0.0.tgz#cb5bdc74ff3f51892236eaf79d68bc44564ab81c"
   integrity sha512-1fygroTLlHu66zi26VoTDv8yRgm0Fccecssto+MhsZ0D/DGW2sm8E8AjW7NU5VVTRt5GxbeZ5qBuJr+HyLYkjQ==
 
+picomatch@^2.2.2, picomatch@^2.3.1:
+  version "2.3.1"
+  resolved "https://registry.yarnpkg.com/picomatch/-/picomatch-2.3.1.tgz#3ba3833733646d9d3e4995946c1365a67fb07a42"
+  integrity sha512-JU3teHTNjmE2VCGFzuY8EXzCDVwEqB2a8fsIvwaStHhAWJEeVd1o1QD80CU6+ZdEXXSLbSsuLwJjkCBWqRQUVA==
+
 picomatch@^2.2.3:
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/picomatch/-/picomatch-2.3.0.tgz#f1f061de8f6a4bf022892e2d128234fb98302972"
   integrity sha512-lY1Q/PiJGC2zOv/z391WOTD+Z02bCgsFfvxoXXf6h7kv9o+WmsmzYqrAwY63sNgOxE4xEdq0WyUnXfKeBrSvYw==
-
-picomatch@^2.3.1:
-  version "2.3.1"
-  resolved "https://registry.yarnpkg.com/picomatch/-/picomatch-2.3.1.tgz#3ba3833733646d9d3e4995946c1365a67fb07a42"
-  integrity sha512-JU3teHTNjmE2VCGFzuY8EXzCDVwEqB2a8fsIvwaStHhAWJEeVd1o1QD80CU6+ZdEXXSLbSsuLwJjkCBWqRQUVA==
 
 pidtree@^0.3.0:
   version "0.3.1"
@@ -7261,6 +7279,11 @@ typescript@^4.6.4, typescript@~4.6.2:
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.6.4.tgz#caa78bbc3a59e6a5c510d35703f6a09877ce45e9"
   integrity sha512-9ia/jWHIEbo49HfjrLGfKbZSuWo9iTMwXO+Ca3pRsSpbsMbc7/IU8NKdCZVRRBafVPGnoJeFL76ZOAA84I9fEg==
 
+ufo@^0.8.3:
+  version "0.8.4"
+  resolved "https://registry.yarnpkg.com/ufo/-/ufo-0.8.4.tgz#23e9ed82398d2116dcb378e8fba5ced8eca2ee40"
+  integrity sha512-/+BmBDe8GvlB2nIflWasLLAInjYG0bC9HRnfEpNi4sw77J2AJNnEVnTDReVrehoh825+Q/evF3THXTAweyam2g==
+
 uglify-js@^3.1.4:
   version "3.15.5"
   resolved "https://registry.yarnpkg.com/uglify-js/-/uglify-js-3.15.5.tgz#2b10f9e0bfb3f5c15a8e8404393b6361eaeb33b3"
@@ -7522,6 +7545,17 @@ vfile@^5.0.0, vfile@^5.3.2:
     is-buffer "^2.0.0"
     unist-util-stringify-position "^3.0.0"
     vfile-message "^3.0.0"
+
+vite-plugin-inspect@^0.5.0:
+  version "0.5.0"
+  resolved "https://registry.yarnpkg.com/vite-plugin-inspect/-/vite-plugin-inspect-0.5.0.tgz#94d1abdd3326519527a72502ced51d747d670b87"
+  integrity sha512-eArca+5jrNx1hQL+5s79eT5Xq4VXjJcihJhK8GT/+W2GqefVxFO1WO78RnD0HPI+hKSdEFo+B4z2zeaE8DTvWQ==
+  dependencies:
+    "@rollup/pluginutils" "^4.2.1"
+    debug "^4.3.4"
+    kolorist "^1.5.1"
+    sirv "^2.0.2"
+    ufo "^0.8.3"
 
 vite@2.9.12, vite@^2.9.12, vite@^2.9.9:
   version "2.9.12"

@@ -1,9 +1,14 @@
 import type { AstroIntegration } from 'astro'
+import { load } from 'cheerio'
+import { readFile, writeFile } from 'fs/promises'
+import { join } from 'path'
 
-import plugin from './plugin.js'
 import { OPTIMIZED_FONT_PROVIDERS } from './utils/constants.js'
+import { getFontDefinitionFromNetwork } from './utils/font-utils.js'
 
 const LIB_NAME = 'astro-fonts-next'
+
+const urls: string[] = []
 
 export interface AstroFontsNextOptions {
   url: string | string[]
@@ -13,12 +18,10 @@ export default (options: AstroFontsNextOptions): AstroIntegration => {
   return {
     name: LIB_NAME,
     hooks: {
-      'astro:config:setup': ({ command, updateConfig }) => {
+      'astro:config:done': () => {
         if (!options.url || options.url === '' || options.url.length === 0) {
           throw new Error(`[${LIB_NAME}]: you must set a \`url\` in your config!`)
         }
-
-        const urls: string[] = []
 
         if (typeof options.url === 'string') {
           urls.push(options.url)
@@ -41,12 +44,46 @@ export default (options: AstroFontsNextOptions): AstroIntegration => {
             throw new Error(`[${LIB_NAME}]: \`${url}\` is not supported`)
           }
         })
+      },
 
-        updateConfig({
-          vite: {
-            plugins: [plugin({ urls, command })],
-          },
+      'astro:server:setup': ({ server }) => {
+        // eslint-disable-next-line no-console
+        console.log(server)
+      },
+
+      'astro:build:done': async ({ pages, dir }) => {
+        const fontDefinitionPromises = urls.map((url) => getFontDefinitionFromNetwork(url))
+
+        const fontsData = (await Promise.all(fontDefinitionPromises)).map((content, i) => ({
+          content,
+          url: urls[i],
+          preconnect: OPTIMIZED_FONT_PROVIDERS.find((provider) => urls[i]?.startsWith(provider.url))?.preconnect,
+        }))
+
+        const promises = pages.map(async ({ pathname }) => {
+          const filePath = join(dir.pathname, pathname, 'index.html')
+          const file = await readFile(filePath, 'utf-8')
+
+          const $ = load(file)
+
+          fontsData.forEach(({ content, url, preconnect }) => {
+            // Preconnect Link
+            if ($(`link[rel="preconnect"][href="${preconnect}"]`).length === 0) {
+              $('head').append(`<link rel="preconnect" href="${preconnect}">`)
+            }
+
+            // Font CSS
+            if ($(`style[data-href="${url}"]`).length === 0) {
+              $('head').append(`<style data-href="${url}">${content}</style>`)
+            }
+          })
+
+          await writeFile(filePath, $.html())
         })
+
+        await Promise.all(promises)
+        // eslint-disable-next-line no-console
+        console.log(`[${LIB_NAME}]: Font optimization is complete.`)
       },
     },
   }
