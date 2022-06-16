@@ -1,6 +1,5 @@
 import type { AstroIntegration } from 'astro'
 import { load } from 'cheerio'
-import { readdirSync } from 'fs'
 import { readFile, writeFile } from 'fs/promises'
 import { join } from 'path'
 
