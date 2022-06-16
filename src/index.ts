@@ -1,7 +1,8 @@
 import type { AstroIntegration } from 'astro'
 import { load } from 'cheerio'
 import { readFile, writeFile } from 'fs/promises'
-import { join } from 'node:path'
+import { type } from 'os'
+import { join, parse } from 'path'
 
 import { OPTIMIZED_FONT_PROVIDERS } from './utils/constants.js'
 import { getFontDefinitionFromNetwork } from './utils/font-utils.js'
@@ -75,6 +76,8 @@ export default (options: AstroFontsNextOptions): AstroIntegration => {
           }
 
           const filePath = join(dir.pathname, extensionWithPathname)
+          // eslint-disable-next-line no-console
+          type() === 'Windows_NT' && console.log(parse(dir.pathname))
           const file = await readFile(filePath, 'utf-8')
 
           const $ = load(file)
