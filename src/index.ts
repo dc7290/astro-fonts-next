@@ -46,9 +46,6 @@ export default (options: AstroFontsNextOptions): AstroIntegration => {
           }
         })
 
-        // eslint-disable-next-line no-console
-        console.log(config.root)
-
         buildFormat = config.build.format
       },
 
@@ -76,6 +73,9 @@ export default (options: AstroFontsNextOptions): AstroIntegration => {
           } else {
             extensionWithPathname = pathname.replace(/\/$/, '') + '.html'
           }
+
+          // eslint-disable-next-line no-console
+          console.log(dir)
 
           const filePath = join(dir.pathname, extensionWithPathname)
           const file = await readFile(filePath, 'utf-8')
