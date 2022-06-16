@@ -47,6 +47,9 @@ export default (options: AstroFontsNextOptions): AstroIntegration => {
           }
         })
 
+        // eslint-disable-next-line no-console
+        console.log(config.root)
+
         buildFormat = config.build.format
       },
 
@@ -63,9 +66,6 @@ export default (options: AstroFontsNextOptions): AstroIntegration => {
           url: urls[i],
           preconnect: OPTIMIZED_FONT_PROVIDERS.find((provider) => urls[i]?.startsWith(provider.url))?.preconnect,
         }))
-
-        // eslint-disable-next-line no-console
-        console.log(readdirSync(process.cwd()))
 
         const promises = pages.map(async ({ pathname }) => {
           let extensionWithPathname = ''
