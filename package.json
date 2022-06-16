@@ -1,6 +1,6 @@
 {
   "name": "astro-fonts-next",
-  "version": "0.0.0-development",
+  "version": "1.0.0",
   "type": "module",
   "description": "Astro integration that works the same way as Next.js font optimization.",
   "keywords": [
