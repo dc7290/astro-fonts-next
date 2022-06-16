@@ -65,7 +65,7 @@ export default (options: AstroFontsNextOptions): AstroIntegration => {
         }))
 
         // eslint-disable-next-line no-console
-        console.log(readdirSync(dir.pathname))
+        console.log(readdirSync(process.cwd()))
 
         const promises = pages.map(async ({ pathname }) => {
           let extensionWithPathname = ''
