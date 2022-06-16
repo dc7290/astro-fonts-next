@@ -74,7 +74,7 @@ export default (options: AstroFontsNextOptions): AstroIntegration => {
             extensionWithPathname = pathname.replace(/\/$/, '') + '.html'
           }
 
-          const filePath = join(dir.pathname.replace(/^\//, ''), extensionWithPathname)
+          const filePath = join(dir.pathname, extensionWithPathname)
           const file = await readFile(filePath, 'utf-8')
 
           const $ = load(file)
