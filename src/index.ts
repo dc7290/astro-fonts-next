@@ -1,7 +1,7 @@
 import type { AstroIntegration } from 'astro'
 import { load } from 'cheerio'
 import { readFile, writeFile } from 'fs/promises'
-import { join, resolve } from 'path'
+import { join, resolve } from 'node:path'
 
 import { OPTIMIZED_FONT_PROVIDERS } from './utils/constants.js'
 import { getFontDefinitionFromNetwork } from './utils/font-utils.js'
@@ -55,6 +55,9 @@ export default (options: AstroFontsNextOptions): AstroIntegration => {
       // },
 
       'astro:build:done': async ({ pages, dir }) => {
+        // eslint-disable-next-line no-console
+        console.log(dir.pathname)
+
         const fontDefinitionPromises = urls.map((url) => getFontDefinitionFromNetwork(url))
 
         const fontsData = (await Promise.all(fontDefinitionPromises)).map((content, i) => ({
