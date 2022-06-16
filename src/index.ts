@@ -55,9 +55,6 @@ export default (options: AstroFontsNextOptions): AstroIntegration => {
       // },
 
       'astro:build:done': async ({ pages, dir }) => {
-        // eslint-disable-next-line no-console
-        console.log(dir.pathname)
-
         const fontDefinitionPromises = urls.map((url) => getFontDefinitionFromNetwork(url))
 
         const fontsData = (await Promise.all(fontDefinitionPromises)).map((content, i) => ({
@@ -78,6 +75,8 @@ export default (options: AstroFontsNextOptions): AstroIntegration => {
           }
 
           const filePath = resolve(dir.pathname, extensionWithPathname)
+          // eslint-disable-next-line no-console
+          console.log(filePath)
           const file = await readFile(filePath, 'utf-8')
 
           const $ = load(file)
