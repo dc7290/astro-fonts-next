@@ -75,7 +75,7 @@ export default (options: AstroFontsNextOptions): AstroIntegration => {
           }
 
           // eslint-disable-next-line no-console
-          console.log(dir)
+          console.log(extensionWithPathname, join(dir.pathname, extensionWithPathname))
 
           const filePath = join(dir.pathname, extensionWithPathname)
           const file = await readFile(filePath, 'utf-8')
