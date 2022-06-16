@@ -74,9 +74,7 @@ export default (options: AstroFontsNextOptions): AstroIntegration => {
             extensionWithPathname = pathname.replace(/\/$/, '') + '.html'
           }
 
-          const filePath = resolve(dir.pathname, extensionWithPathname)
-          // eslint-disable-next-line no-console
-          console.log(filePath)
+          const filePath = resolve(dir.pathname.replace(/^\//, ''), extensionWithPathname)
           const file = await readFile(filePath, 'utf-8')
 
           const $ = load(file)
