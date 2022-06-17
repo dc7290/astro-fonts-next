@@ -50,9 +50,3 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/) and this 
 ### Continuous Integration
 
 * 🎡 Set SKIP_BY_SEMANTIC_RELEASE=true ([dfe2ee2](https://github.com/dc7290/astro-fonts-next/commit/dfe2ee26cf09f48f2933e0b09ff50c067e867f64))
-
-## [1.0.0](https://github.com/dc7290/astro-fonts-next/releases/tag/v1.0.0) (2022--)
-
-### Added
-
-- Everything!
