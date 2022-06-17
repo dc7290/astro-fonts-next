@@ -1,8 +1,9 @@
 import type { AstroIntegration } from 'astro'
 import { load } from 'cheerio'
+import { writeFileSync } from 'fs'
 import { readFile, writeFile } from 'fs/promises'
 import { type } from 'os'
-import { join } from 'path'
+import { dirname, join } from 'path'
 
 import { OPTIMIZED_FONT_PROVIDERS } from './utils/constants.js'
 import { getFontDefinitionFromNetwork } from './utils/font-utils.js'
@@ -16,44 +17,51 @@ export interface AstroFontsNextOptions {
   url: string | string[]
 }
 
+const init = (url: AstroFontsNextOptions['url']) => {
+  if (!url || url === '' || url.length === 0) {
+    throw new Error(`[${LIB_NAME}]: you must set a \`url\` in your config!`)
+  }
+
+  if (typeof url === 'string') {
+    urls.push(url)
+  }
+  if (Array.isArray(url)) {
+    urls.push(...url)
+  }
+
+  // Check if the URL is valid
+  urls.forEach((url) => {
+    try {
+      new URL(url)
+    } catch (_) {
+      throw new Error(`[${LIB_NAME}]: \`${url}\` is not a valid URL.`)
+    }
+  })
+
+  urls.forEach((url) => {
+    if (OPTIMIZED_FONT_PROVIDERS.findIndex((providers) => url.startsWith(providers.url)) === -1) {
+      throw new Error(`[${LIB_NAME}]: \`${url}\` is not supported`)
+    }
+  })
+}
+
 export default (options: AstroFontsNextOptions): AstroIntegration => {
   return {
     name: LIB_NAME,
     hooks: {
-      'astro:config:done': ({ config }) => {
-        if (!options.url || options.url === '' || options.url.length === 0) {
-          throw new Error(`[${LIB_NAME}]: you must set a \`url\` in your config!`)
+      'astro:config:setup': ({ command, injectScript }) => {
+        init(options.url)
+
+        if (command === 'dev') {
+          writeFileSync(join(dirname(new URL(import.meta.url).pathname), './urls.json'), JSON.stringify(urls))
+
+          injectScript('page', `import devScript from 'astro-fonts-next/dev.js'; devScript()`)
         }
-
-        if (typeof options.url === 'string') {
-          urls.push(options.url)
-        }
-        if (Array.isArray(options.url)) {
-          urls.push(...options.url)
-        }
-
-        // Check if the URL is valid
-        urls.forEach((url) => {
-          try {
-            new URL(url)
-          } catch (_) {
-            throw new Error(`[${LIB_NAME}]: \`${url}\` is not a valid URL.`)
-          }
-        })
-
-        urls.forEach((url) => {
-          if (OPTIMIZED_FONT_PROVIDERS.findIndex((providers) => url.startsWith(providers.url)) === -1) {
-            throw new Error(`[${LIB_NAME}]: \`${url}\` is not supported`)
-          }
-        })
-
-        buildFormat = config.build.format
       },
 
-      // 'astro:server:setup': ({ server }) => {
-      //   // eslint-disable-next-line no-console
-      //   console.log(server)
-      // },
+      'astro:config:done': ({ config }) => {
+        buildFormat = config.build.format
+      },
 
       'astro:build:done': async ({ pages, dir }) => {
         const fontDefinitionPromises = urls.map((url) => getFontDefinitionFromNetwork(url))

@@ -9,6 +9,10 @@
     "fonts",
     "optimization"
   ],
+  "exports": {
+    ".": "./dist/index.js",
+    "./dev.js": "./dist/dev.js"
+  },
   "homepage": "https://github.com/dc7290/astro-fonts-next#readme",
   "bugs": {
     "url": "https://github.com/dc7290/astro-fonts-next/issues"
@@ -34,10 +38,12 @@
     "prepare": "husky install",
     "semantic-release": "SKIP_BY_SEMANTIC_RELEASE=true semantic-release",
     "test": "vitest run",
-    "test:dev:simple": "astro dev --root ./__tests__/fixtures/simple",
+    "test:dev:single": "astro dev --root ./__tests__/fixtures/single",
     "test:dev:multiple": "astro dev --root ./__tests__/fixtures/multiple",
-    "test:build:simple": "astro build --root ./__tests__/fixtures/simple",
+    "test:build:single": "astro build --root ./__tests__/fixtures/single-file",
+    "test:build:single-file": "astro build --root ./__tests__/fixtures/single",
     "test:build:multiple": "astro build --root ./__tests__/fixtures/multiple",
+    "test:build:multiple-file": "astro build --root ./__tests__/fixtures/multiple-file",
     "test:build": "run-p test:build:*",
     "pretest": "run-s build test:build"
   },
@@ -67,6 +73,7 @@
     "eslint-config-prettier": "8.5.0",
     "eslint-plugin-simple-import-sort": "7.0.0",
     "git-cz": "4.9.0",
+    "globby": "^13.1.2",
     "husky": "8.0.1",
     "lint-staged": "12.5.0",
     "npm-run-all": "4.1.5",
