@@ -40,8 +40,10 @@
     "test": "vitest run",
     "test:dev:single": "astro dev --root ./__tests__/fixtures/single",
     "test:dev:multiple": "astro dev --root ./__tests__/fixtures/multiple",
-    "test:build:single": "astro build --root ./__tests__/fixtures/single",
+    "test:build:single": "astro build --root ./__tests__/fixtures/single-file",
+    "test:build:single-file": "astro build --root ./__tests__/fixtures/single",
     "test:build:multiple": "astro build --root ./__tests__/fixtures/multiple",
+    "test:build:multiple-file": "astro build --root ./__tests__/fixtures/multiple-file",
     "test:build": "run-p test:build:*",
     "pretest": "run-s build test:build"
   },

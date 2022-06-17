@@ -8,7 +8,7 @@ export default defineConfig({
     format: 'file'
   },
   integrations: [
-    astroFonts({ url: 'https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,700;1,400&display=swap' }),
+    astroFonts({ url: 'https://fonts.googleapis.com/css2?family=Roboto:wght@400;700' }),
   ],
   experimental: {
     integrations: true
