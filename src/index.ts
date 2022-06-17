@@ -16,44 +16,45 @@ export interface AstroFontsNextOptions {
   url: string | string[]
 }
 
+const init = (url: AstroFontsNextOptions['url']) => {
+  if (!url || url === '' || url.length === 0) {
+    throw new Error(`[${LIB_NAME}]: you must set a \`url\` in your config!`)
+  }
+
+  if (typeof url === 'string') {
+    urls.push(url)
+  }
+  if (Array.isArray(url)) {
+    urls.push(...url)
+  }
+
+  // Check if the URL is valid
+  urls.forEach((url) => {
+    try {
+      new URL(url)
+    } catch (_) {
+      throw new Error(`[${LIB_NAME}]: \`${url}\` is not a valid URL.`)
+    }
+  })
+
+  urls.forEach((url) => {
+    if (OPTIMIZED_FONT_PROVIDERS.findIndex((providers) => url.startsWith(providers.url)) === -1) {
+      throw new Error(`[${LIB_NAME}]: \`${url}\` is not supported`)
+    }
+  })
+}
+
 export default (options: AstroFontsNextOptions): AstroIntegration => {
   return {
     name: LIB_NAME,
     hooks: {
-      'astro:config:done': ({ config }) => {
-        if (!options.url || options.url === '' || options.url.length === 0) {
-          throw new Error(`[${LIB_NAME}]: you must set a \`url\` in your config!`)
-        }
-
-        if (typeof options.url === 'string') {
-          urls.push(options.url)
-        }
-        if (Array.isArray(options.url)) {
-          urls.push(...options.url)
-        }
-
-        // Check if the URL is valid
-        urls.forEach((url) => {
-          try {
-            new URL(url)
-          } catch (_) {
-            throw new Error(`[${LIB_NAME}]: \`${url}\` is not a valid URL.`)
-          }
-        })
-
-        urls.forEach((url) => {
-          if (OPTIMIZED_FONT_PROVIDERS.findIndex((providers) => url.startsWith(providers.url)) === -1) {
-            throw new Error(`[${LIB_NAME}]: \`${url}\` is not supported`)
-          }
-        })
-
-        buildFormat = config.build.format
+      'astro:config:setup': () => {
+        init(options.url)
       },
 
-      // 'astro:server:setup': ({ server }) => {
-      //   // eslint-disable-next-line no-console
-      //   console.log(server)
-      // },
+      'astro:config:done': ({ config }) => {
+        buildFormat = config.build.format
+      },
 
       'astro:build:done': async ({ pages, dir }) => {
         const fontDefinitionPromises = urls.map((url) => getFontDefinitionFromNetwork(url))
