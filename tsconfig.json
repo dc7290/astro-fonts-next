@@ -4,7 +4,8 @@
     "noEmit": true,
     "target": "ES2015",
     "module": "ESNext",
-    "moduleResolution": "node"
+    "moduleResolution": "node",
+    "resolveJsonModule": true
   },
   "include": ["**/*.ts"]
 }

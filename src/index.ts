@@ -1,8 +1,9 @@
 import type { AstroIntegration } from 'astro'
 import { load } from 'cheerio'
+import { writeFileSync } from 'fs'
 import { readFile, writeFile } from 'fs/promises'
 import { type } from 'os'
-import { join } from 'path'
+import { dirname, join } from 'path'
 
 import { OPTIMIZED_FONT_PROVIDERS } from './utils/constants.js'
 import { getFontDefinitionFromNetwork } from './utils/font-utils.js'
@@ -48,8 +49,14 @@ export default (options: AstroFontsNextOptions): AstroIntegration => {
   return {
     name: LIB_NAME,
     hooks: {
-      'astro:config:setup': () => {
+      'astro:config:setup': ({ command, injectScript }) => {
         init(options.url)
+
+        if (command === 'dev') {
+          writeFileSync(join(dirname(new URL(import.meta.url).pathname), './urls.json'), JSON.stringify(urls))
+
+          injectScript('page', `import devScript from 'astro-fonts-next/dev.js'; devScript()`)
+        }
       },
 
       'astro:config:done': ({ config }) => {

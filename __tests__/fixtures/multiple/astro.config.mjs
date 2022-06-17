@@ -1,4 +1,5 @@
 import { defineConfig } from 'astro/config'
+import path from 'path'
 
 import astroFonts from '../../../dist/index.js'
 
@@ -13,6 +14,11 @@ export default defineConfig({
     }),
   ],
   experimental: {
-    integrations: true
-  }
+    integrations: true,
+  },
+  vite: {
+    resolve: {
+      alias: { 'astro-fonts-next/dev.js': path.join(process.cwd(), 'dist/dev.js') },
+    },
+  },
 })

@@ -9,6 +9,10 @@
     "fonts",
     "optimization"
   ],
+  "exports": {
+    ".": "./dist/index.js",
+    "./dev.js": "./dist/dev.js"
+  },
   "homepage": "https://github.com/dc7290/astro-fonts-next#readme",
   "bugs": {
     "url": "https://github.com/dc7290/astro-fonts-next/issues"
