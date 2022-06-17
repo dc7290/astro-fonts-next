@@ -22,14 +22,14 @@ yarn add -D astro-fonts-next
 ```js
 // astro.config.mjs
 import { defineConfig } from 'astro/config'
-import astroFonts from 'astro-fonts-next'
+import fonts from 'astro-fonts-next'
 
 export default defineConfig({
   integrations: [
-    astroFonts({ url: 'https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap' }),
-    // astroFonts({ url: 'https://use.typekit.net/~~~~~.css' }),
+    fonts({ url: 'https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap' }),
+    // fonts({ url: 'https://use.typekit.net/~~~~~.css' }),
     // or
-    astroFonts({
+    fonts({
       url: [
         'https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap',
         'https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap',
@@ -46,7 +46,7 @@ export default defineConfig({
 
 ### Integration
 
-`import astroFonts from 'astro-fonts-next'`
+`import fonts from 'astro-fonts-next'`
 
 | key | type                   | required | default | description                                                                                                                                                                                                                                                                                                 |
 | --- | ---------------------- | -------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
