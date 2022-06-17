@@ -6,6 +6,25 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/) and this 
 
 ## [Released](https://github.com/dc7290/astro-fonts-next/releases)
 
+## [1.0.1](https://github.com/dc7290/astro-fonts-next/compare/v1.0.0...v1.0.1) (2022-06-17)
+
+
+### Bug Fixes
+
+* 🐛 Insert font links during development ([ca49168](https://github.com/dc7290/astro-fonts-next/commit/ca49168404c3c35795d2ab975f8223ea6aa13325))
+
+
+### Documentation
+
+* ✏️ README describes how to use it ([5fb8435](https://github.com/dc7290/astro-fonts-next/commit/5fb84351398b87653119e961d9f40cc8565db869))
+
+
+### Tests
+
+* 💍 Added snapshot test ([a724866](https://github.com/dc7290/astro-fonts-next/commit/a72486672eeda303b98e69db5040974f6763c3fd))
+* 💍 Import path/posix from path ([1ef8188](https://github.com/dc7290/astro-fonts-next/commit/1ef81885cf9d3a26d3c9cf2a817529fa7380aad0))
+* 💍 Modified from snapshot testing to testing with cheerio ([1361a1d](https://github.com/dc7290/astro-fonts-next/commit/1361a1de7986e1c769e5678e6779b10078032b67))
+
 ## 1.0.0 (2022-06-16)
 
 
