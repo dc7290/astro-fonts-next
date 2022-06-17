@@ -1,12 +1,11 @@
 import { load } from 'cheerio'
 import { readFile } from 'fs/promises'
 import { globby } from 'globby'
-import { join } from 'path'
-import { join as posixJoin } from 'path/posix'
+import { join, posix } from 'path'
 import { describe, expect, test } from 'vitest'
 
 const getDistDir = (fixturePath: string) =>
-  globby(posixJoin('__tests__/fixtures', fixturePath), {
+  globby(posix.join('__tests__/fixtures', fixturePath), {
     expandDirectories: { extensions: ['html'] },
   })
 const getHtmlData = async (fixturePath: string) => {
