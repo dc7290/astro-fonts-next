@@ -91,10 +91,10 @@
     svelte "^3.24.0"
     svelte2tsx "^0.5.5"
 
-"@astrojs/telemetry@^0.2.3":
-  version "0.2.3"
-  resolved "https://registry.yarnpkg.com/@astrojs/telemetry/-/telemetry-0.2.3.tgz#7c1d0627583f368523449c092775cdde325a9d43"
-  integrity sha512-w2+1Qgusr1ODKRWMdOesLl3dPhsBZGPrKJEhpaLSQ9YfwDqV3tXFjoG7EGxAzf6apmq54dDJg9pJXq1uydYMGQ==
+"@astrojs/telemetry@^0.2.4":
+  version "0.2.4"
+  resolved "https://registry.yarnpkg.com/@astrojs/telemetry/-/telemetry-0.2.4.tgz#9b0bdd74d52f3948a809ab7a58d829b4e9858589"
+  integrity sha512-GdOfwDd13LAWsrL6lbuTJf2jV5/WYhjFB0xWanlFKcNetxbfLUPKwTh0dQeAKeSVy8NyOyZGzurBRDYGUk2ttA==
   dependencies:
     ci-info "^3.3.1"
     debug "^4.3.4"
@@ -1520,16 +1520,16 @@ astral-regex@^2.0.0:
   resolved "https://registry.yarnpkg.com/astral-regex/-/astral-regex-2.0.0.tgz#483143c567aeed4785759c0865786dc77d7d2e31"
   integrity sha512-Z7tMw1ytTXt5jqMcOP+OQteU1VuNK9Y02uuJtKQ1Sv69jXQKKg5cibLwGJow8yzZP+eAc18EmLGPal0bp36rvQ==
 
-astro@1.0.0-beta.63:
-  version "1.0.0-beta.63"
-  resolved "https://registry.yarnpkg.com/astro/-/astro-1.0.0-beta.63.tgz#27d236a69bcf5c25920152964c0a9365c3e6a3aa"
-  integrity sha512-X8cvewsQcW4TZAMilXpvd66ggathuE89B64tlWq5zVBIixyIyNf1WR/LMiKbS358/w+LPnxFMv0hoR9Y8GkPYg==
+astro@1.0.0-beta.64:
+  version "1.0.0-beta.64"
+  resolved "https://registry.yarnpkg.com/astro/-/astro-1.0.0-beta.64.tgz#5f9349872038a69394af8f4b268e344be34c7435"
+  integrity sha512-c6Lv6KIE1LZgZ1uu4lYt/uFrTl+o1iq4udyBuadxVFMg3Kf7Wl0rGNLI31hqUoPIli9s0lJibCNuzHT+ab2vRw==
   dependencies:
     "@astrojs/compiler" "^0.17.1"
     "@astrojs/language-server" "^0.13.4"
     "@astrojs/markdown-remark" "^0.11.3"
     "@astrojs/prism" "0.4.1"
-    "@astrojs/telemetry" "^0.2.3"
+    "@astrojs/telemetry" "^0.2.4"
     "@astrojs/webapi" "^0.12.0"
     "@babel/core" "^7.18.2"
     "@babel/generator" "^7.18.2"
