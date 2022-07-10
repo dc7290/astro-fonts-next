@@ -6,6 +6,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/) and this 
 
 ## [Released](https://github.com/dc7290/astro-fonts-next/releases)
 
+## [1.0.2](https://github.com/dc7290/astro-fonts-next/compare/v1.0.1...v1.0.2) (2022-07-10)
+
+
+### Bug Fixes
+
+* 🐛 Process the received URL object with fileURLToPath ([9a3f7a7](https://github.com/dc7290/astro-fonts-next/commit/9a3f7a71e2146fb230a78fee75cd5dd7ed0e3519))
+* **deps:** update dependency cheerio to ^1.0.0-rc.12 ([8a8bd43](https://github.com/dc7290/astro-fonts-next/commit/8a8bd439c0a93bf1de365e43222df23fdc086092))
+
 ## [1.0.1](https://github.com/dc7290/astro-fonts-next/compare/v1.0.0...v1.0.1) (2022-06-17)
 
 
