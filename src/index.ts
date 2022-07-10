@@ -2,8 +2,8 @@ import type { AstroIntegration } from 'astro'
 import { load } from 'cheerio'
 import { writeFileSync } from 'fs'
 import { readFile, writeFile } from 'fs/promises'
-import { type } from 'os'
 import { dirname, join } from 'path'
+import { fileURLToPath } from 'url'
 
 import { OPTIMIZED_FONT_PROVIDERS } from './utils/constants.js'
 import { getFontDefinitionFromNetwork } from './utils/font-utils.js'
@@ -83,10 +83,7 @@ export default (options: AstroFontsNextOptions): AstroIntegration => {
             extensionWithPathname = pathname.replace(/\/$/, '') + '.html'
           }
 
-          const filePath = join(
-            type() === 'Windows_NT' ? dir.pathname.replace(/^\//, '') : dir.pathname,
-            extensionWithPathname
-          )
+          const filePath = join(fileURLToPath(dir), extensionWithPathname)
           const file = await readFile(filePath, 'utf-8')
 
           const $ = load(file)
