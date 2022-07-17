@@ -53,7 +53,7 @@ export default (options: AstroFontsNextOptions): AstroIntegration => {
         init(options.url)
 
         if (command === 'dev') {
-          writeFileSync(join(dirname(new URL(import.meta.url).pathname), './urls.json'), JSON.stringify(urls))
+          writeFileSync(join(dirname(fileURLToPath(import.meta.url)), './urls.json'), JSON.stringify(urls))
 
           injectScript('page', `import devScript from 'astro-fonts-next/dev.js'; devScript()`)
         }
