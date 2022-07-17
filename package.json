@@ -62,31 +62,31 @@
     "@semantic-release/changelog": "6.0.1",
     "@semantic-release/git": "10.0.1",
     "@tsconfig/strictest": "1.0.1",
-    "@types/node": "16.11.43",
-    "@typescript-eslint/eslint-plugin": "5.30.5",
-    "@typescript-eslint/parser": "5.30.5",
-    "@vitest/ui": "0.18.0",
-    "astro": "1.0.0-beta.65",
+    "@types/node": "16.11.45",
+    "@typescript-eslint/eslint-plugin": "5.30.6",
+    "@typescript-eslint/parser": "5.30.6",
+    "@vitest/ui": "0.18.1",
+    "astro": "1.0.0-beta.72",
     "c8": "7.11.3",
     "conventional-changelog-conventionalcommits": "5.0.0",
-    "eslint": "8.19.0",
+    "eslint": "8.20.0",
     "eslint-config-prettier": "8.5.0",
     "eslint-plugin-simple-import-sort": "7.0.0",
     "git-cz": "4.9.0",
     "globby": "^13.1.2",
     "husky": "8.0.1",
-    "lint-staged": "12.5.0",
+    "lint-staged": "13.0.3",
     "npm-run-all": "4.1.5",
     "prettier": "2.7.1",
     "rimraf": "3.0.2",
     "semantic-release": "19.0.3",
     "typescript": "4.7.4",
     "vite": "2.9.14",
-    "vite-plugin-inspect": "0.5.1",
-    "vitest": "0.18.0"
+    "vite-plugin-inspect": "0.6.0",
+    "vitest": "0.18.1"
   },
   "peerDependencies": {
-    "astro": "^1.0.0-beta.65"
+    "astro": "^1.0.0-beta.72"
   },
   "engines": {
     "node": "^14.0.0 || ^16.0.0 || ^18.0.0"
