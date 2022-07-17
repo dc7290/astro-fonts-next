@@ -6,6 +6,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/) and this 
 
 ## [Released](https://github.com/dc7290/astro-fonts-next/releases)
 
+## [1.0.3](https://github.com/dc7290/astro-fonts-next/compare/v1.0.2...v1.0.3) (2022-07-17)
+
+
+### Bug Fixes
+
+* 🐛 Fixed how to create dirname ([3f80560](https://github.com/dc7290/astro-fonts-next/commit/3f80560ac0ca1cc1ec0bf581a43cc54ae01a236c))
+
 ## [1.0.2](https://github.com/dc7290/astro-fonts-next/compare/v1.0.1...v1.0.2) (2022-07-10)
 
 
