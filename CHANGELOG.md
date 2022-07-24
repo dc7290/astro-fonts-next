@@ -6,6 +6,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/) and this 
 
 ## [Released](https://github.com/dc7290/astro-fonts-next/releases)
 
+## [1.0.4](https://github.com/dc7290/astro-fonts-next/compare/v1.0.3...v1.0.4) (2022-07-24)
+
+
+### Bug Fixes
+
+* Added support for a custom 404 page. ([f72f4ef](https://github.com/dc7290/astro-fonts-next/commit/f72f4ef4615b75b473487a946ab38d6b22910892))
+
 ## [1.0.3](https://github.com/dc7290/astro-fonts-next/compare/v1.0.2...v1.0.3) (2022-07-17)
 
 
