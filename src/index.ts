@@ -77,6 +77,8 @@ export default (options: AstroFontsNextOptions): AstroIntegration => {
 
           if (pathname === '') {
             extensionWithPathname = 'index.html'
+          } else if (pathname === '404/') {
+            extensionWithPathname = '404.html'
           } else if (buildFormat === 'directory') {
             extensionWithPathname = join(pathname, 'index.html')
           } else {
