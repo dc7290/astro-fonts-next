@@ -10,10 +10,10 @@
     "@jridgewell/gen-mapping" "^0.1.0"
     "@jridgewell/trace-mapping" "^0.3.9"
 
-"@astrojs/compiler@^0.19.0":
-  version "0.19.0"
-  resolved "https://registry.yarnpkg.com/@astrojs/compiler/-/compiler-0.19.0.tgz#ea25fea3ba59ce7734c2bcc65a5fd1e372329943"
-  integrity sha512-8nvyxZTfCXLyRmYfTttpJT6EPhfBRg0/q4J/Jj3/pNPLzp+vs05ZdktsY6QxAREaOMAnNEtSqcrB4S5DsXOfRg==
+"@astrojs/compiler@^0.22.1":
+  version "0.22.1"
+  resolved "https://registry.yarnpkg.com/@astrojs/compiler/-/compiler-0.22.1.tgz#8d0d4df6e02f72d6ad9b2c99b403c455d4a301c2"
+  integrity sha512-FiRZ7fwJhADPo2X1unTyEq9V7EfeWE3GOBhzKDcFIF8mc5iLZ0VmPXrGmvOUTRXkZH99+TkB1SXGaTDjelRa2w==
 
 "@astrojs/language-server@^0.20.0":
   version "0.20.1"
@@ -31,10 +31,10 @@
     vscode-languageserver-types "^3.17.1"
     vscode-uri "^3.0.3"
 
-"@astrojs/markdown-remark@^0.12.0":
-  version "0.12.0"
-  resolved "https://registry.yarnpkg.com/@astrojs/markdown-remark/-/markdown-remark-0.12.0.tgz#44c37f3bccf804098a610e3fa4d7849444c1796b"
-  integrity sha512-g1mTXA8Z6z9NxOrkVpB/d0I2sBZsZ+EZyf5MWNuujqYHvas6eCfyx9frhwyLcxnxHBPmJdr80FXOryO+/C0Jgg==
+"@astrojs/markdown-remark@^0.13.0":
+  version "0.13.0"
+  resolved "https://registry.yarnpkg.com/@astrojs/markdown-remark/-/markdown-remark-0.13.0.tgz#017c83dc1c9db4be14818e37215d2f64e530535d"
+  integrity sha512-TZ3Z40xf5TjEUA4lURq3qbq/Y7eMfwKGhTf0bp0T659uU9Jxi2ZV8KVR4EcXRj/UMoaDOlCTY8dANWHrh3WLjw==
   dependencies:
     "@astrojs/micromark-extension-mdx-jsx" "^1.0.3"
     "@astrojs/prism" "^0.6.1"
@@ -1509,14 +1509,14 @@ astral-regex@^2.0.0:
   resolved "https://registry.yarnpkg.com/astral-regex/-/astral-regex-2.0.0.tgz#483143c567aeed4785759c0865786dc77d7d2e31"
   integrity sha512-Z7tMw1ytTXt5jqMcOP+OQteU1VuNK9Y02uuJtKQ1Sv69jXQKKg5cibLwGJow8yzZP+eAc18EmLGPal0bp36rvQ==
 
-astro@1.0.0-beta.73:
-  version "1.0.0-beta.73"
-  resolved "https://registry.yarnpkg.com/astro/-/astro-1.0.0-beta.73.tgz#5fcd5a4a6b95a509a7f8ef47815201a2fa25d222"
-  integrity sha512-8gVu04SrJsXJYoLouXWWoj/ZEH2etutLyRzpdK/ueCEdwCmxxCzjXVMvX72aAL/5goFCo4VRuiFWFq7OU1MWLg==
+astro@1.0.0-rc.2:
+  version "1.0.0-rc.2"
+  resolved "https://registry.yarnpkg.com/astro/-/astro-1.0.0-rc.2.tgz#75ed0a8f4fb07d642b6b5ba27ac3b99d4d8915db"
+  integrity sha512-a950/UCWM6f/l6xGiO8AiAdXMyOuSJk/FRMZXevH7p0H5ze5j4yTyMv0e43rztfk4jIshjdJdg4dV9xzg8P+QQ==
   dependencies:
-    "@astrojs/compiler" "^0.19.0"
+    "@astrojs/compiler" "^0.22.1"
     "@astrojs/language-server" "^0.20.0"
-    "@astrojs/markdown-remark" "^0.12.0"
+    "@astrojs/markdown-remark" "^0.13.0"
     "@astrojs/prism" "0.6.1"
     "@astrojs/telemetry" "^0.4.1"
     "@astrojs/webapi" "^0.12.0"
@@ -1557,6 +1557,7 @@ astro@1.0.0-beta.73:
     prismjs "^1.28.0"
     prompts "^2.4.2"
     recast "^0.20.5"
+    rehype "^12.0.1"
     resolve "^1.22.0"
     rollup "^2.75.6"
     semver "^7.3.7"
@@ -1568,7 +1569,9 @@ astro@1.0.0-beta.73:
     strip-ansi "^7.0.1"
     supports-esm "^1.0.0"
     tsconfig-resolver "^3.0.1"
-    vite "^2.9.14"
+    unist-util-visit "^4.1.0"
+    vfile "^5.3.2"
+    vite "3.0.2"
     yargs-parser "^21.0.1"
     zod "^3.17.3"
 
@@ -6486,6 +6489,16 @@ registry-auth-token@^4.0.0:
   dependencies:
     rc "^1.2.8"
 
+rehype-parse@^8.0.0:
+  version "8.0.4"
+  resolved "https://registry.yarnpkg.com/rehype-parse/-/rehype-parse-8.0.4.tgz#3d17c9ff16ddfef6bbcc8e6a25a99467b482d688"
+  integrity sha512-MJJKONunHjoTh4kc3dsM1v3C9kGrrxvA3U8PxZlP2SjH8RNUSrb+lF7Y0KVaUDnGH2QZ5vAn7ulkiajM9ifuqg==
+  dependencies:
+    "@types/hast" "^2.0.0"
+    hast-util-from-parse5 "^7.0.0"
+    parse5 "^6.0.0"
+    unified "^10.0.0"
+
 rehype-raw@^6.1.1:
   version "6.1.1"
   resolved "https://registry.yarnpkg.com/rehype-raw/-/rehype-raw-6.1.1.tgz#81bbef3793bd7abacc6bf8335879d1b6c868c9d4"
@@ -6495,13 +6508,23 @@ rehype-raw@^6.1.1:
     hast-util-raw "^7.2.0"
     unified "^10.0.0"
 
-rehype-stringify@^9.0.3:
+rehype-stringify@^9.0.0, rehype-stringify@^9.0.3:
   version "9.0.3"
   resolved "https://registry.yarnpkg.com/rehype-stringify/-/rehype-stringify-9.0.3.tgz#70e3bd6d4d29e7acf36b802deed350305d2c3c17"
   integrity sha512-kWiZ1bgyWlgOxpqD5HnxShKAdXtb2IUljn3hQAhySeak6IOQPPt6DeGnsIh4ixm7yKJWzm8TXFuC/lPfcWHJqw==
   dependencies:
     "@types/hast" "^2.0.0"
     hast-util-to-html "^8.0.0"
+    unified "^10.0.0"
+
+rehype@^12.0.1:
+  version "12.0.1"
+  resolved "https://registry.yarnpkg.com/rehype/-/rehype-12.0.1.tgz#68a317662576dcaa2565a3952e149d6900096bf6"
+  integrity sha512-ey6kAqwLM3X6QnMDILJthGvG1m1ULROS9NT4uG9IDCuv08SFyLlreSuvOa//DgEvbXx62DS6elGVqusWhRUbgw==
+  dependencies:
+    "@types/hast" "^2.0.0"
+    rehype-parse "^8.0.0"
+    rehype-stringify "^9.0.0"
     unified "^10.0.0"
 
 remark-gfm@^3.0.1:
@@ -7789,7 +7812,7 @@ vite@3.0.2:
   optionalDependencies:
     fsevents "~2.3.2"
 
-"vite@^2.9.12 || ^3.0.0-0", vite@^2.9.14:
+"vite@^2.9.12 || ^3.0.0-0":
   version "2.9.14"
   resolved "https://registry.yarnpkg.com/vite/-/vite-2.9.14.tgz#c438324c6594afd1050df3777da981dee988bb1b"
   integrity sha512-P/UCjSpSMcE54r4mPak55hWAZPlyfS369svib/gpmz8/01L822lMPOJ/RYW6tLCe1RPvMvOsJ17erf55bKp4Hw==
