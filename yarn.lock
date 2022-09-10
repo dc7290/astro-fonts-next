@@ -3507,7 +3507,7 @@ fromentries@^1.3.2:
   resolved "https://registry.yarnpkg.com/fromentries/-/fromentries-1.3.2.tgz#e4bca6808816bf8f93b52750f1127f5a6fd86e3a"
   integrity sha512-cHEpEQHUg0f8XdtZCc2ZAhrHzKzT0MrFUTcvx+hfxYu7rGMDc5SKoXFh+n4YigxsHXRzc6OrCshdR1bWH6HHyg==
 
-fs-extra@^10.0.0:
+fs-extra@^10.0.0, fs-extra@^10.1.0:
   version "10.1.0"
   resolved "https://registry.yarnpkg.com/fs-extra/-/fs-extra-10.1.0.tgz#02873cfbc4084dde127eaa5f9905eef2325d1abf"
   integrity sha512-oRXApq54ETRj4eMiFzGnHWGy+zo5raudjuxN0b8H7s/RU2oW0Wvsx9O0ACRN/kRq9E8Vu/ReskGB5o3ji+FzHQ==
@@ -8024,13 +8024,14 @@ vfile@^5.0.0, vfile@^5.3.2:
     unist-util-stringify-position "^3.0.0"
     vfile-message "^3.0.0"
 
-vite-plugin-inspect@0.6.1:
-  version "0.6.1"
-  resolved "https://registry.yarnpkg.com/vite-plugin-inspect/-/vite-plugin-inspect-0.6.1.tgz#c8e1b72afc0dfefd8eab60f2ec13071c10d54e11"
-  integrity sha512-MQzIgMoPyiPDuHoO6p7QBOrmheBU/ntg0cgtgcnm21S/Xds5oak1CbVLSAvv4fK1ZpetLK+tlJ+2mlFO9fG3SQ==
+vite-plugin-inspect@0.7.1:
+  version "0.7.1"
+  resolved "https://registry.yarnpkg.com/vite-plugin-inspect/-/vite-plugin-inspect-0.7.1.tgz#37339cc6bb476674c36b7ef68506bdb7cd5e49c1"
+  integrity sha512-mkTw5itsI+89WNJ6og0BpEAaV4ticrOGaoj+oWDR61W72H2mfkuw3MaAdpnnq6s6A7tKfM4nPaMtxjlmw3uXYg==
   dependencies:
     "@rollup/pluginutils" "^4.2.1"
     debug "^4.3.4"
+    fs-extra "^10.1.0"
     kolorist "^1.5.1"
     sirv "^2.0.2"
     ufo "^0.8.5"
