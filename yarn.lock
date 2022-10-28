@@ -6522,6 +6522,15 @@ postcss@^8.4.16:
     picocolors "^1.0.0"
     source-map-js "^1.0.2"
 
+postcss@^8.4.18:
+  version "8.4.18"
+  resolved "https://registry.yarnpkg.com/postcss/-/postcss-8.4.18.tgz#6d50046ea7d3d66a85e0e782074e7203bc7fbca2"
+  integrity sha512-Wi8mWhncLJm11GATDaQKobXSNEYGUHeQLiQqDFG1qQ5UTDPTEvKw0Xt5NsTpktGTwLps3ByrWsBrG0rB8YQ9oA==
+  dependencies:
+    nanoid "^3.3.4"
+    picocolors "^1.0.0"
+    source-map-js "^1.0.2"
+
 preferred-pm@^3.0.3:
   version "3.0.3"
   resolved "https://registry.yarnpkg.com/preferred-pm/-/preferred-pm-3.0.3.tgz#1b6338000371e3edbce52ef2e4f65eb2e73586d6"
@@ -7003,6 +7012,13 @@ roarr@^2.15.3:
     json-stringify-safe "^5.0.1"
     semver-compare "^1.0.0"
     sprintf-js "^1.1.2"
+
+rollup@^2.79.1:
+  version "2.79.1"
+  resolved "https://registry.yarnpkg.com/rollup/-/rollup-2.79.1.tgz#bedee8faef7c9f93a2647ac0108748f497f081c7"
+  integrity sha512-uKxbd0IhMZOhjAiD5oAFp7BqvkA4Dv47qpOCtaNvng4HBwdbWtdOh8f5nZNuk2rp51PMGk3bzfWu5oayNEuYnw==
+  optionalDependencies:
+    fsevents "~2.3.2"
 
 rollup@~2.78.0:
   version "2.78.1"
@@ -8150,15 +8166,15 @@ vite-plugin-inspect@0.7.5:
     sirv "^2.0.2"
     ufo "^0.8.5"
 
-vite@3.1.8:
-  version "3.1.8"
-  resolved "https://registry.yarnpkg.com/vite/-/vite-3.1.8.tgz#fa29144167d19b773baffd65b3972ea4c12359c9"
-  integrity sha512-m7jJe3nufUbuOfotkntGFupinL/fmuTNuQmiVE7cH2IZMuf4UbfbGYMUT3jVWgGYuRVLY9j8NnrRqgw5rr5QTg==
+vite@3.2.1:
+  version "3.2.1"
+  resolved "https://registry.yarnpkg.com/vite/-/vite-3.2.1.tgz#dc1f54568300a7acdd89c8611e2719c21f1334f4"
+  integrity sha512-ADtMkfHuWq4tskJsri2n2FZkORO8ZyhI+zIz7zTrDAgDEtct1jdxOg3YsZBfHhKjmMoWLOSCr+64qrEDGo/DbQ==
   dependencies:
     esbuild "^0.15.9"
-    postcss "^8.4.16"
+    postcss "^8.4.18"
     resolve "^1.22.1"
-    rollup "~2.78.0"
+    rollup "^2.79.1"
   optionalDependencies:
     fsevents "~2.3.2"
 
