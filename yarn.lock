@@ -7779,10 +7779,10 @@ typescript@^4.6.4:
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.6.4.tgz#caa78bbc3a59e6a5c510d35703f6a09877ce45e9"
   integrity sha512-9ia/jWHIEbo49HfjrLGfKbZSuWo9iTMwXO+Ca3pRsSpbsMbc7/IU8NKdCZVRRBafVPGnoJeFL76ZOAA84I9fEg==
 
-ufo@^0.8.6:
-  version "0.8.6"
-  resolved "https://registry.yarnpkg.com/ufo/-/ufo-0.8.6.tgz#c0ec89bc0e0c9fa59a683680feb0f28b55ec323b"
-  integrity sha512-fk6CmUgwKCfX79EzcDQQpSCMxrHstvbLswFChHS0Vump+kFkw7nJBfTZoC1j0bOGoY9I7R3n2DGek5ajbcYnOw==
+ufo@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/ufo/-/ufo-1.0.0.tgz#eb64f4c8797d6aa6c710a836abab0bade9d11ca6"
+  integrity sha512-DRty0ZBNlJ2R59y4mEupJRKLbkLQsc4qtxjpQv78AwEDuBkaUogMc2LkeqW3HddFlw6NwnXYfdThEZOiNgkmmQ==
 
 uglify-js@^3.1.4:
   version "3.15.5"
@@ -8029,17 +8029,17 @@ vfile@^5.0.0, vfile@^5.3.2:
     unist-util-stringify-position "^3.0.0"
     vfile-message "^3.0.0"
 
-vite-plugin-inspect@0.7.8:
-  version "0.7.8"
-  resolved "https://registry.yarnpkg.com/vite-plugin-inspect/-/vite-plugin-inspect-0.7.8.tgz#c8e8098474a0fe532c294d78d8fded80d9ea4ced"
-  integrity sha512-LjLcpKOV3CPxCXXZ+jS6H/3xk9c/lcGLnGu9dCj5RU4jCbHg84dqlrS02UekVx9SvZfaitVJZMUHtWtXG4T4JA==
+vite-plugin-inspect@0.7.9:
+  version "0.7.9"
+  resolved "https://registry.yarnpkg.com/vite-plugin-inspect/-/vite-plugin-inspect-0.7.9.tgz#097508b6ad5f01ac0d31a0c93cd4cce78a99b3c0"
+  integrity sha512-YBI5/smKxx2gc5MrzQ8n6ztGxdtItoqumJn96d6b57SvC9aSvjMXsvzUgrR/dlVXCnpu755m1TXp3h/TsVOwJA==
   dependencies:
     "@rollup/pluginutils" "^5.0.2"
     debug "^4.3.4"
     fs-extra "^10.1.0"
     kolorist "^1.6.0"
     sirv "^2.0.2"
-    ufo "^0.8.6"
+    ufo "^1.0.0"
 
 vite@3.2.4, vite@~3.2.4:
   version "3.2.4"
