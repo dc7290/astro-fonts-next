@@ -65,7 +65,7 @@
     "@types/node": "16.18.7",
     "@typescript-eslint/eslint-plugin": "5.45.0",
     "@typescript-eslint/parser": "5.45.0",
-    "@vitest/ui": "0.25.3",
+    "@vitest/ui": "0.25.6",
     "astro": "1.6.14",
     "c8": "7.12.0",
     "conventional-changelog-conventionalcommits": "5.0.0",
@@ -83,7 +83,7 @@
     "typescript": "4.9.4",
     "vite": "3.2.5",
     "vite-plugin-inspect": "0.7.9",
-    "vitest": "0.25.3"
+    "vitest": "0.25.6"
   },
   "peerDependencies": {
     "astro": "^1.6.14"
