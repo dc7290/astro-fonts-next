@@ -8096,10 +8096,10 @@ vfile@^5.0.0, vfile@^5.3.2:
     unist-util-stringify-position "^3.0.0"
     vfile-message "^3.0.0"
 
-vite-plugin-inspect@0.7.10:
-  version "0.7.10"
-  resolved "https://registry.yarnpkg.com/vite-plugin-inspect/-/vite-plugin-inspect-0.7.10.tgz#5bdccbd28e0dab0187966c8e1ef7eea0690ad008"
-  integrity sha512-E4r1tDNMw9XLBXk+3lWBQ5N4GfMQHjm5pzcs4SIATAgnEiGTDE9AlYQ9R6gmRmzFoUH7B5SK9Z5s3o0+LfRsDw==
+vite-plugin-inspect@0.7.11:
+  version "0.7.11"
+  resolved "https://registry.yarnpkg.com/vite-plugin-inspect/-/vite-plugin-inspect-0.7.11.tgz#336e30f99e9f0a60d8ae53962df014e7345f5497"
+  integrity sha512-mpNsux1BBu0CoI5E0rFseaExHAfq8mtkuDJpQWnB5RBafyNT3bQMlRPWbVZrBXYZHJL7ruqApd4EFvxeXKZu7Q==
   dependencies:
     "@rollup/pluginutils" "^5.0.2"
     debug "^4.3.4"
