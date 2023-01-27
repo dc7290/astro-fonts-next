@@ -8305,10 +8305,10 @@ vite-node@0.28.3:
     source-map-support "^0.5.21"
     vite "^3.0.0 || ^4.0.0"
 
-vite-plugin-inspect@0.7.14:
-  version "0.7.14"
-  resolved "https://registry.yarnpkg.com/vite-plugin-inspect/-/vite-plugin-inspect-0.7.14.tgz#13e330d89e038ab7fa40f5d6d132ad58b7a16be4"
-  integrity sha512-C9V93Yy2yUf941oVxIq93K6T1o0SZxoG8MdmyJsnoNDijOAGHT1rVSVjzF/uKFYvgnvLvaXioaoy6ica6aOS0g==
+vite-plugin-inspect@0.7.15:
+  version "0.7.15"
+  resolved "https://registry.yarnpkg.com/vite-plugin-inspect/-/vite-plugin-inspect-0.7.15.tgz#09448e3cf0e128c5ac91d61615f6a64b243d0991"
+  integrity sha512-oxeZCljacA/slhGFbDNlBqdhDU9fgdHL84i7Nz7DnaAIE7DhTiW2djanw3d/BKuZtduKUY82vRUQ4iaG917t2A==
   dependencies:
     "@antfu/utils" "^0.7.2"
     "@rollup/pluginutils" "^5.0.2"
