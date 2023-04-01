@@ -62,7 +62,7 @@
     "@semantic-release/changelog": "6.0.3",
     "@semantic-release/git": "10.0.1",
     "@tsconfig/strictest": "1.0.2",
-    "@types/node": "16.18.21",
+    "@types/node": "16.18.23",
     "@typescript-eslint/eslint-plugin": "5.55.0",
     "@typescript-eslint/parser": "5.55.0",
     "@vitest/ui": "0.29.8",
@@ -92,7 +92,7 @@
     "node": "^14.0.0 || ^16.0.0 || ^18.0.0"
   },
   "volta": {
-    "node": "16.19.1",
+    "node": "16.20.0",
     "yarn": "1.22.19"
   }
 }
