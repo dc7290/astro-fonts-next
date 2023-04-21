@@ -82,7 +82,7 @@
     "semantic-release": "19.0.5",
     "typescript": "4.9.5",
     "vite": "3.2.5",
-    "vite-plugin-inspect": "0.7.22",
+    "vite-plugin-inspect": "0.7.24",
     "vitest": "0.30.1"
   },
   "peerDependencies": {
