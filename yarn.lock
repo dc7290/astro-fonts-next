@@ -8400,10 +8400,10 @@ vite-node@0.31.0:
     picocolors "^1.0.0"
     vite "^3.0.0 || ^4.0.0"
 
-vite-plugin-inspect@0.7.25:
-  version "0.7.25"
-  resolved "https://registry.yarnpkg.com/vite-plugin-inspect/-/vite-plugin-inspect-0.7.25.tgz#c2dc68473581f2a070d9d0f5b199cceabc92dd8c"
-  integrity sha512-11j3hG3stRfFkoI+adIDX+KvZueWNgd9lFGdh7lgm0IjGqpP6luCQAMSSnHHV7AZXaTE06X+bUG3M68diz8ZyA==
+vite-plugin-inspect@0.7.26:
+  version "0.7.26"
+  resolved "https://registry.yarnpkg.com/vite-plugin-inspect/-/vite-plugin-inspect-0.7.26.tgz#5ec08a16a7b2198e708cfd56b39ce3cba8d0933a"
+  integrity sha512-gRjBay+OxLr/Dr+HXlfJVXZH0cqhE5hkkBvo2du2cA1LGUBnV8Aym89AdPrURkSpTk3Rvw9dNWM2VLIuw6RKJg==
   dependencies:
     "@antfu/utils" "^0.7.2"
     "@rollup/pluginutils" "^5.0.2"
