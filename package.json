@@ -66,7 +66,7 @@
     "@typescript-eslint/eslint-plugin": "5.59.11",
     "@typescript-eslint/parser": "5.59.11",
     "@vitest/ui": "0.33.0",
-    "astro": "1.9.2",
+    "astro": "2.10.15",
     "c8": "7.14.0",
     "conventional-changelog-conventionalcommits": "5.0.0",
     "eslint": "8.46.0",
@@ -86,7 +86,7 @@
     "vitest": "0.33.0"
   },
   "peerDependencies": {
-    "astro": "^1.9.2"
+    "astro": "^2.10.15"
   },
   "engines": {
     "node": "^14.0.0 || ^16.0.0 || ^18.0.0"
