@@ -65,7 +65,7 @@
     "@types/node": "16.18.69",
     "@typescript-eslint/eslint-plugin": "5.62.0",
     "@typescript-eslint/parser": "5.62.0",
-    "@vitest/ui": "0.34.6",
+    "@vitest/ui": "0.34.7",
     "astro": "1.9.2",
     "c8": "7.14.0",
     "conventional-changelog-conventionalcommits": "5.0.0",
