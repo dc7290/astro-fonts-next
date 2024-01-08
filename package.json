@@ -57,42 +57,42 @@
     "cheerio": "^1.0.0-rc.12"
   },
   "devDependencies": {
-    "@commitlint/cli": "17.0.3",
-    "@commitlint/config-conventional": "17.0.3",
-    "@semantic-release/changelog": "6.0.1",
+    "@commitlint/cli": "17.8.1",
+    "@commitlint/config-conventional": "17.8.1",
+    "@semantic-release/changelog": "6.0.3",
     "@semantic-release/git": "10.0.1",
-    "@tsconfig/strictest": "1.0.1",
-    "@types/node": "16.11.47",
-    "@typescript-eslint/eslint-plugin": "5.33.0",
-    "@typescript-eslint/parser": "5.33.0",
-    "@vitest/ui": "0.21.1",
-    "astro": "1.0.3",
-    "c8": "7.12.0",
+    "@tsconfig/strictest": "1.0.2",
+    "@types/node": "16.18.69",
+    "@typescript-eslint/eslint-plugin": "5.62.0",
+    "@typescript-eslint/parser": "5.62.0",
+    "@vitest/ui": "0.34.7",
+    "astro": "1.9.2",
+    "c8": "7.14.0",
     "conventional-changelog-conventionalcommits": "5.0.0",
-    "eslint": "8.21.0",
-    "eslint-config-prettier": "8.5.0",
+    "eslint": "8.52.0",
+    "eslint-config-prettier": "8.10.0",
     "eslint-plugin-simple-import-sort": "7.0.0",
     "git-cz": "4.9.0",
-    "globby": "^13.1.2",
-    "husky": "8.0.1",
-    "lint-staged": "13.0.3",
+    "globby": "^13.2.2",
+    "husky": "8.0.3",
+    "lint-staged": "13.2.3",
     "npm-run-all": "4.1.5",
-    "prettier": "2.7.1",
+    "prettier": "2.8.8",
     "rimraf": "3.0.2",
-    "semantic-release": "19.0.3",
-    "typescript": "4.7.4",
-    "vite": "3.0.4",
-    "vite-plugin-inspect": "0.6.0",
-    "vitest": "0.21.1"
+    "semantic-release": "19.0.5",
+    "typescript": "4.9.5",
+    "vite": "3.2.7",
+    "vite-plugin-inspect": "0.7.42",
+    "vitest": "0.34.6"
   },
   "peerDependencies": {
-    "astro": "^1.0.3"
+    "astro": "^1.9.2"
   },
   "engines": {
-    "node": "^14.0.0 || ^16.0.0 || ^18.0.0"
+    "node": "^14.0.0 || ^16.0.0 || ^18.0.0 || ^20.0.0"
   },
   "volta": {
-    "node": "16.16.0",
+    "node": "16.20.2",
     "yarn": "1.22.19"
   }
 }
