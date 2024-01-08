@@ -6,6 +6,20 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/) and this 
 
 ## [Released](https://github.com/dc7290/astro-fonts-next/releases)
 
+## [1.0.6](https://github.com/dc7290/astro-fonts-next/compare/v1.0.5...v1.0.6) (2024-01-08)
+
+
+### Bug Fixes
+
+* 🐛 Support Node.js 20.x ([8f8464f](https://github.com/dc7290/astro-fonts-next/commit/8f8464fc950ac224aca46d1646973addaa0cdbae))
+
+## [1.0.5](https://github.com/dc7290/astro-fonts-next/compare/v1.0.4...v1.0.5) (2022-08-12)
+
+
+### Bug Fixes
+
+* 🐛 Astro ver.1.0.0 ([efda51c](https://github.com/dc7290/astro-fonts-next/commit/efda51c9ae915a6096f794ed5c92577081372f90))
+
 ## [1.0.4](https://github.com/dc7290/astro-fonts-next/compare/v1.0.3...v1.0.4) (2022-07-24)
 
 
