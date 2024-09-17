@@ -81,7 +81,7 @@
     "rimraf": "3.0.2",
     "semantic-release": "19.0.5",
     "typescript": "4.9.5",
-    "vite": "3.2.7",
+    "vite": "3.2.11",
     "vite-plugin-inspect": "0.7.42",
     "vitest": "0.34.6"
   },
